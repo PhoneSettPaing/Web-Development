@@ -1,0 +1,16 @@
+body {
+    background-color: #FEFCF3;
+}
+
+.profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: scale-do;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
