@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+<div class="checkList">
+    <div class="listTitle">
+        <h2><%= day %>, <%= month %> <%= date %></h2>
+    </div>
+    <div class="list">
+        <div class="item">
+            <input type="checkbox">
+            <p>Clean My Room</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Sweep the Floor</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Watch Anime</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Chat with Friend</p>
+        </div>
+        <div class="item">
+            <input type="checkbox">
+            <p>Play some Games</p>
+        </div>
+        <% if (locals.addlist) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= addlist %></p>
+            </div>
+        <% } %>
+        <form action="/addTodayList" class="addItem" method="POST">
+            <input type="text" name="addCheckList" placeholder="New Item">
+            <input type="submit" value="+">
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
